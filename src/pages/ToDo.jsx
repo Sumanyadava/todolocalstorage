@@ -73,6 +73,7 @@ const ToDo = () => {
 
   return (
     <div className=" h-[60vh] w-screen">
+      <h1 className="text-2xl absolute top-5 left-8 w-[80%]"><b>Your Todo's Are safe </b>as it store your task in you machine so no other computer has access ot it</h1>
       <div className="todo_heading h-[10vh] w-full  flex justify-center items-center gap-5">
         <input
           className="h-full w-[70%] pl-10 outline-none rounded-3xl"
@@ -110,7 +111,7 @@ const ToDo = () => {
                 >
                   <b>{index +1 }</b> . {task}
                 </div>
-                <div className="label-text w-[10%] flex ">
+                <div className="label-text w-[10%] flex flex-col sm:flex-row">
                   <div
                     className="btn btn-ghost "
                     onClick={() => handleEdit(index)}
