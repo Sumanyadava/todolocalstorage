@@ -97,9 +97,11 @@ const ToDo = () => {
             key={index}
             className={`ourTask flex flex-col justify-around items-center gap-2 mt-5 `}
           >
-            <div className="task h-20 w-[90%] sm:w-[75%] ">
-              <div className="form-control bg-yellow-200 h-full w-full flex flex-row items-center rounded-xl sm:justify-around pl-3 ">
-                <div className="todo_task flex  w-[50%] h-full items-center justify-start overflow-y-auto gap-5 no-scrollbar " onClick={() => handleCheck(index)} >
+            <div className="task min-h-20  w-[90%] sm:w-[75%] ">
+              <div className="form-control bg-yellow-200 min-h-20 w-full flex flex-row items-center rounded-xl   ">
+
+
+                <div className="todo_task flex  w-[55%] h-full items-center justify-start overflow-y-auto gap-5  ml-2 no-scrollbar " onClick={() => handleCheck(index)} >
                 <input
                   type="checkbox"
                   className="checkbox"
@@ -107,7 +109,7 @@ const ToDo = () => {
                   
                 />
                 <div
-                  className={`label-text w-40 text-2xl text-black font-bold ${
+                  className={`label-text w-40 text-2xl text-black font-bold  p- flex  h-full ${
                     completedTasks[index] ? "line-through" : ""
                   }`}
                 >
@@ -115,9 +117,9 @@ const ToDo = () => {
                 </div>
                 </div>
 
-                <div className="label-text w-[10%] flex flex-row gap-5 ">
+                <div className="label-text h-full w-[45%] flex  flex-row gap-3 items-center justify-end  mr-2">
                   <div
-                    className="btn bg-white  text-lg text-black hover:text-white "
+                    className="btn bg-white  text-lg text-black sm:hover:text-white  "
                     onClick={() => handleEdit(index)}
                   >
                     edit
